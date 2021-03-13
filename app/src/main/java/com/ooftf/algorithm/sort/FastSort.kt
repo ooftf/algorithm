@@ -2,6 +2,9 @@ package com.ooftf.algorithm.sort
 
 import android.util.Log
 
+/**
+ * 快速排序，从两侧遍历找
+ */
 object FastSort {
     @JvmStatic
     fun main(args: Array<String>) {
@@ -18,28 +21,6 @@ object FastSort {
                 99,
                 9,
                 1,
-                48,
-                64,
-                1,
-                3,
-                15,
-                64,
-                8,
-                1,
-                65,
-                4,
-                8,
-                45,
-                6,
-                4,
-                9,
-                9,
-                9,
-                9,
-                9,
-                9,
-                9,
-                9,
                 9,
                 9,
                 9,

@@ -1,5 +1,8 @@
 package com.ooftf.algorithm.sort;
 
+/**
+ * 快速排序，从一侧查找
+ */
 class QuickSort {
     // 从一侧遍历找
     public static int Parition(int[] array, int left, int right) {
