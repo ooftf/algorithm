@@ -21,6 +21,7 @@ class StrStr {
             for (j in needle.indices) {
                 if (needle[j] == haystack[i + j]) {
                     if (j == needle.length - 1) {
+
                         return i
                     }
                 } else {
