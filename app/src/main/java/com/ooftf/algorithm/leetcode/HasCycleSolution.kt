@@ -30,7 +30,3 @@ class HasCycleSolution {
         return false
     }
 }
-
-class ListNode(var `val`: Int) {
-    var next: ListNode? = null
-}

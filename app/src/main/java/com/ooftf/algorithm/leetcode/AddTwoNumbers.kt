@@ -32,9 +32,5 @@ class AddTwoNumbers {
         }
         return header
     }
-
-    class ListNode(var `val`: Int) {
-        var next: ListNode? = null
-    }
 }
 

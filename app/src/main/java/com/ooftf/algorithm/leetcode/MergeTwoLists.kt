@@ -44,9 +44,5 @@ object MergeTwoLists {
         }
         return result
     }
-
-    class ListNode(var `val`: Int) {
-        var next: ListNode? = null
-    }
 }
 
