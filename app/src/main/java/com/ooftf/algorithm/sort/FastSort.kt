@@ -28,45 +28,33 @@ object FastSort {
                 9,
                 9
             )//1.3.2  left 1  right =1
-        sort(data, 0, data.size - 1)
+        doSort(data, 0, data.size - 1)
         println("result::${data.contentToString()}")
     }
 
-    /**
-     * 从两侧遍历找
-     */
-    fun sort(args: Array<Int>, startIndex: Int, endIndex: Int) {
-        if (startIndex >= endIndex) {
+    fun doSort(array: Array<Int>, start: Int, end: Int) {
+        if (start >= end) {
             return
         }
-
-
-        var right = endIndex
-        var left = startIndex
+        var left = start
+        var right = end
+        var leftAnchor = true
         while (left < right) {
-            while (left < right && args[right] >= args[startIndex]) {
-                right--
-            }
-
-            while (left < right && args[left] <= args[startIndex]) {
-                left++
-            }
-            if (left < right) {
-                val temp = args[left]
-                args[left] = args[right]
-                args[right] = temp
+            if (array[right] < array[left]) {
+                val temp = array[left]
+                array[left] = array[right]
+                array[right] = temp
+                leftAnchor = !leftAnchor
+            } else {
+                if (leftAnchor) {
+                    right--
+                } else {
+                    left++
+                }
             }
         }
-
-        val temp = args[left]
-        args[left] = args[startIndex]
-        args[startIndex] = temp
-
-        println(args)
-        sort(args, startIndex, left - 1)
-        sort(args, left + 1, endIndex)
-
-
+        doSort(array,start,left-1)
+        doSort(array,left+1,end)
     }
 }
 
