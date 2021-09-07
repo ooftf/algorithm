@@ -9,12 +9,16 @@ class BinarySearch {
         var high = array.size-1
         while(low<high){
             var mid = Math.floor((low+high)/2.0).toInt()
-            if(key == array[mid]){
-                return array[mid]
-            }else if(key < array[mid]){
-                high = mid+1
-            }else{
-                low = mid-1
+            when {
+                key == array[mid] -> {
+                    return array[mid]
+                }
+                key < array[mid] -> {
+                    high = mid+1
+                }
+                else -> {
+                    low = mid-1
+                }
             }
         }
         return 0
